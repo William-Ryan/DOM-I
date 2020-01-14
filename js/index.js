@@ -40,3 +40,85 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Navigation
+let navBar = document.querySelector("nav");
+
+const lastContent = document.createElement("nav");
+lastContent.textContent = "banana";
+
+const firstContent = document.createElement("nav");
+firstContent.textContent = "apple";
+
+let links = navBar.getElementsByTagName('a');
+links[0].textContent = "Services";
+links[1].textContent = "Product";
+links[2].textContent = "Vision";
+links[3].textContent = "Features";
+links[4].textContent = "About";
+links[5].textContent = "Contact";
+
+Array.from(links).forEach((link) => {
+  link.style.color = "green";
+})
+
+links[0].prepend(firstContent);
+
+links[1].append(lastContent);
+
+
+// navBar.forEach( element => {element.style.color = "green"});
+
+//Header
+let header = document.querySelector(".cta");
+
+let title = header.querySelector("h1");
+title.textContent = "DOM Is Awesome";
+
+let button = header.querySelector("button");
+button.textContent = "Get Started";
+
+let codeImg = header.querySelector("#cta-img");
+codeImg.src = "img/header-img.png";
+codeImg.alt = "Sphere of code";
+
+//Main-Content
+let body = document.querySelector(".main-content");
+
+let subTitles = body.getElementsByTagName("h4");
+subTitles[0].textContent = "Features";
+subTitles[1].textContent = "About";
+subTitles[2].textContent = "Services";
+subTitles[3].textContent = "Product";
+subTitles[4].textContent = "Vision";
+
+Array.from(subTitles).forEach((title) => {
+  title.style.backgroundColor = "yellow";
+})
+
+let para = body.getElementsByTagName("p");
+para[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+para[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+para[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+para[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+para[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let middleImg = body.querySelector("#middle-img");
+middleImg.src = "img/mid-page-accent.jpg";
+middleImg.alt = "Strip of code";
+//Contact
+let address = document.querySelector(".contact");
+
+let lastTitle = address.getElementsByTagName("h4");
+lastTitle[0].textContent = "Contact";
+
+let list = address.getElementsByTagName("p");
+list[0].textContent = "123 Way 456 Street Somewhere, USA";
+list[1].textContent = "1 (888) 888-8888";
+list[2].textContent = "sales@greatidea.io";
+
+//Footer
+let foot = document.querySelector("footer");
+
+let copy = foot.getElementsByTagName("p");
+copy[0].textContent = "Copyright Great Idea! 2018";
