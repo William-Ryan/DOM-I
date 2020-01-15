@@ -44,11 +44,15 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //Navigation
 let navBar = document.querySelector("nav");
 
-const lastContent = document.createElement("nav");
+const firstContent = document.createElement("a");
+firstContent.textContent = "apple";
+
+const lastContent = document.createElement("a");
 lastContent.textContent = "banana";
 
-const firstContent = document.createElement("nav");
-firstContent.textContent = "apple";
+
+
+
 
 let links = navBar.getElementsByTagName('a');
 links[0].textContent = "Services";
@@ -57,14 +61,13 @@ links[2].textContent = "Vision";
 links[3].textContent = "Features";
 links[4].textContent = "About";
 links[5].textContent = "Contact";
-
+navBar.prepend(firstContent);
+navBar.append(lastContent);
 Array.from(links).forEach((link) => {
   link.style.color = "green";
 })
 
-links[0].prepend(firstContent);
 
-links[1].append(lastContent);
 
 
 // navBar.forEach( element => {element.style.color = "green"});
@@ -106,6 +109,7 @@ para[4].textContent = "Vision content elementum magna eros, ac posuere elvit tem
 let middleImg = body.querySelector("#middle-img");
 middleImg.src = "img/mid-page-accent.jpg";
 middleImg.alt = "Strip of code";
+
 //Contact
 let address = document.querySelector(".contact");
 
